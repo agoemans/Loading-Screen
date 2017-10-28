@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loader Examples</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" >
+</head>
+<body>
+    <script type="text/javascript" src="js/app.js"></script>
+    <canvas id="myApp" width="600" height="400"></canvas>
+
+    <script type="text/javascript">
+        // include the web-font loader script
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' === document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+
+        var app = app.getInstance();
+        app.start();
+
+    </script>
+
+</body>
+</html>
